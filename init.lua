@@ -14,4 +14,5 @@ require("v8tenko.plugins.autopairs")
 require("v8tenko.plugins.treesitter")
 require("v8tenko.plugins.gitsigns")
 require("v8tenko.plugins.buffers")
+require("v8tenko.plugins.blamer")
 

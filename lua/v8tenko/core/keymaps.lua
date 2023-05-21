@@ -11,7 +11,7 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("i", "jk", "<ESC>")
 
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<leader>cs", ":nohl<cr>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -24,23 +24,23 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+keymap.set("n", "<leader>sx", ":close<cr>") -- close current split window
 
-keymap.set("n", "<leader>tt", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>rt", ":BufDel<CR>") -- close current tab
-keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>") --  go to next tab
-keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>") --  go to previous tab
+keymap.set("n", "<leader>tt", ":tabnew<cr>") -- open new tab
+keymap.set("n", "<leader>cc", ":BufDel<cr>") -- close current tab
+keymap.set("n", "<leader>l", ":BufferLineCycleNext<cr>") --  go to next tab
+keymap.set("n", "<leader>h", ":BufferLineCyclePrev<cr>") --  go to previous tab
 ----------------------
 -- Plugin Keybinds
 ----------------------
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+keymap.set("n", "<leader>sm", ":MaximizerToggle<cr>") -- toggle split window maximization
 
 -- nvim-tree
-keymap.set("n", "<leader>tf", ":NvimTreeFindFile<CR>")
-keymap.set("n", "<leader>p", ":NvimTreeFocus<CR>")
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>tf", ":NvimTreeFindFile<cr>")
+keymap.set("n", "<leader>p", ":NvimTreeFocus<cr>")
+keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -55,5 +55,11 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
+-- git blame
+keymap.set("n", "<leader>tb", "<cmd>:BlamerToggle<cr>")
+
 -- restart lsp server (not on youtube nvim video)
-keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+keymap.set("n", "<leader>rs", ":LspRestart<cr>") -- mapping to restart lsp if necessary
+
+-- git 
+keymap.set("n", "<leader>pd", "<cmd>Gitsigns preview_hunk<cr>")

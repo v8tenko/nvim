@@ -19,4 +19,5 @@ saga.setup({
   server_filetype_map = {
     typescript = "typescript",
   },
+  request_timeout = 5000,
 })
